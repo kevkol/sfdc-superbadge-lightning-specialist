@@ -45,14 +45,14 @@
     }
   },
 
-  // onFormSubmit: function(component, event, helper) {
-  //   var boatTypeId = component.find("filterSelect").get("v.value");
-  //   var submitForm = component.getEvent("formSubmit");
-  //   submitForm.setParams({
-  //     "formData": {
-  //       "boatTypeId": boatTypeId
-  //     }
-  //   });
-  //   submitForm.fire();
-  // }
+  onFormSubmit: function(component, event, helper) {
+    var boatTypeId = component.find("filterSelect").get("v.value");
+    var submitForm = component.getEvent("formSubmit");
+    submitForm.setParams({
+      "formData": {
+        "boatTypeId": boatTypeId
+      }
+    });
+    submitForm.fire();
+  }
 })

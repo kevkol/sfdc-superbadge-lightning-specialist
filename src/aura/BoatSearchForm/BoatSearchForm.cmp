@@ -4,7 +4,7 @@
   <aura:attribute name="typeOptions" type="List" default="[{value:'', label:'All Types'}]"/>
   <aura:attribute name="showNewButton" type="Boolean" default="false"/>
   <aura:handler name="init" value="this" action="{!c.doInit}"/>
-  <!-- <aura:registerEvent name="formSubmit" type="c:FormSubmit"/> -->
+  <aura:registerEvent name="formSubmit" type="c:FormSubmit"/>
 
   <lightning:layout horizontalAlign="center" verticalAlign="center" pullToBoundary="medium">
 

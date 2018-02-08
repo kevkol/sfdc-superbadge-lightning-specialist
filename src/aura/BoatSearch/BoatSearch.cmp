@@ -1,6 +1,6 @@
 <aura:component description="BoatSearch" implements="flexipage:availableForAllPageTypes" access="global">
 
-  <!-- <aura:handler name="formSubmit" event="c:FormSubmit" action="{!c.onFormSubmit}"/> -->
+  <aura:handler name="formSubmit" event="c:FormSubmit" action="{!c.onFormSubmit}"/>
 
   <lightning:card title="Find a Boat">
     <c:BoatSearchForm/>
