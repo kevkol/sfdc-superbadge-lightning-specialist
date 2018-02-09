@@ -3,7 +3,7 @@
   <aura:handler name="formSubmit" event="c:FormSubmit" action="{!c.onFormSubmit}"/>
 
   <lightning:card title="Find a Boat">
-    <c:BoatSearchForm/>
+    <c:BoatSearchForm />
   </lightning:card>
 
   <lightning:card title="Matching Boats">
