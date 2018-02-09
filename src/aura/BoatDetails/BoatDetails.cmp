@@ -4,6 +4,7 @@
   <aura:attribute name="recordError" type="String"/>
   <aura:attribute name="id" type="Id" default="" access="public"/>
   <aura:handler event="c:BoatSelected" action="{!c.onBoatSelected}"/>
+  <aura:handler name="boatReviewAdded" event="c:BoatReviewAdded" action="{!c.onBoatReviewAdded}"/>
 
   <force:recordData
     aura:id="service"
@@ -16,15 +17,15 @@
 
   <aura:if isTrue="{! !empty(v.boat)}">
     <article class="slds-card">
-      <lightning:tabset>
-        <lightning:tab label="Details" id="details">
+      <lightning:tabset aura:id="tabs">
+        <lightning:tab label="Details" id="detailtab">
           <c:BoatDetail boat="{!v.boat}"/>
         </lightning:tab>
-        <lightning:tab label="Reviews" id="reviews">
+        <lightning:tab label="Reviews" id="boatreviewtab">
           reviews
         </lightning:tab>
-        <lightning:tab label="Add Review" id="addreview">
-          add review
+        <lightning:tab label="Add Review" id="addreviewtab">
+          <c:AddBoatReview boat="{!v.boat}"/>
         </lightning:tab>
       </lightning:tabset>
     </article>

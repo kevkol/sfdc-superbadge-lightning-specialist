@@ -5,5 +5,10 @@
     var service = component.find("service");
     service.reloadRecord();
   },
-  onRecordUpdated: function(component, event, helper) {},
+  onRecordUpdated: function(component, event, helper) {
+
+  },
+  onBoatReviewAdded: function(component, event, helper) {
+    component.find("tabs").set("v.selectedTabId", "boatreviewtab");
+  }
 })
