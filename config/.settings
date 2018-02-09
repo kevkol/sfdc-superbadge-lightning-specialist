@@ -1,0 +1,17 @@
+{
+    "projectName": "superbadge-lgnting-specialist",
+    "username": "liang.zhao83@brave-goat-360875.com",
+    "id": "90e58770-0b79-11e8-83fb-8fa7bfa5a73d",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://brave-goat-360875-dev-ed.my.salesforce.com",
+    "workspace": "/Users/jzhao/Documents/projects/sfdc",
+    "subscription": [
+        "ApexClass",
+        "ApexTrigger",
+        "AuraDefinitionBundle",
+        "CustomObject",
+        "StaticResource"
+    ]
+}
