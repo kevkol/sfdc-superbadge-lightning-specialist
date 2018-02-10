@@ -2,16 +2,25 @@
   onBoatClick: function(component, event, helper) {
     var boat = component.get('v.boat');
 
-    var boatSelect = component.getEvent("BoatSelect");
-    boatSelect.setParams({
+    var boatSelectEvent = component.getEvent("BoatSelect");
+    boatSelectEvent.setParams({
       "boatId": boat.Id
     });
-    boatSelect.fire();
+    boatSelectEvent.fire();
 
-    var boatSelected = $A.get('e.c:BoatSelected');
-    boatSelected.setParams({
+    var boatSelectedEvent = $A.get('e.c:BoatSelected');
+    boatSelectedEvent.setParams({
       "boat": boat
     });
-    boatSelected.fire();
+    boatSelectedEvent.fire();
+
+    var plotMapMarkerAppEvent = $A.get("e.c:PlotMapMarker");
+    plotMapMarkerAppEvent.setParams({
+      "lat": boat.Geolocation__Latitude__s,
+      "long": boat.Geolocation__Longitude__s,
+      "label": boat.Name,
+      "SObjectId": boat.Id
+    });
+    plotMapMarkerAppEvent.fire();
   }
 })
